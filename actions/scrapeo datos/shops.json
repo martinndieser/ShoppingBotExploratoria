@@ -1,0 +1,618 @@
+[
+    {
+        "name": "+ Visi\u00f3n",
+        "category": "Accesorios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5145",
+        "web_link": "www.masvision.com.ar"
+    },
+    {
+        "name": "47 Street",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "L.M. CAMPOS",
+        "phone": "4778-5066",
+        "web_link": "www.47street.com.ar"
+    },
+    {
+        "name": "A.Y. Not Dead",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5041",
+        "web_link": "www.aynotdead.com.ar"
+    },
+    {
+        "name": "Adriana Costantini",
+        "category": "Mujer",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5086",
+        "web_link": "www.adrianaconstantini.com.ar"
+    },
+    {
+        "name": "Akiabara",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5094",
+        "web_link": "www.akiabara.com"
+    },
+    {
+        "name": "almundo.com",
+        "category": "Varios",
+        "shopping_location": "Nivel UNO",
+        "phone": "52635859",
+        "web_link": "www.almundo.com.ar"
+    },
+    {
+        "name": "Alvarado",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5195",
+        "web_link": "www.facebook.com/alvarado.fincadecafe/"
+    },
+    {
+        "name": "All\u00f4 Martinez",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5105",
+        "web_link": "www.allomartinez.com"
+    },
+    {
+        "name": "Arredo",
+        "category": "Hogar",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5144",
+        "web_link": "www.arredo.com.ar"
+    },
+    {
+        "name": "Awada",
+        "category": "Mujer",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5075",
+        "web_link": "www.awada.com.ar"
+    },
+    {
+        "name": "Ayres",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5093",
+        "web_link": "www.ayres.com.ar"
+    },
+    {
+        "name": "Beneida",
+        "category": "Mujer",
+        "shopping_location": "Nivel Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "beneida.com.ar"
+    },
+    {
+        "name": "Bensimon",
+        "category": "Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5083",
+        "web_link": "www.bensimon.com.ar"
+    },
+    {
+        "name": "Besha",
+        "category": "Marroquiner\u00eda",
+        "shopping_location": "Nivel Arce",
+        "phone": "",
+        "web_link": "besha.com.ar"
+    },
+    {
+        "name": "Broer",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5181",
+        "web_link": "www.grisino.com/home-broer"
+    },
+    {
+        "name": "CALA",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "11 3402-6147",
+        "web_link": "www.calandra.com.ar"
+    },
+    {
+        "name": "Caro Cuore",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5065",
+        "web_link": "www.carocuore.com.ar"
+    },
+    {
+        "name": "Centro Rossi",
+        "category": "Servicios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5027",
+        "web_link": "www.cdrossi.com"
+    },
+    {
+        "name": "Ceremony",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Uno",
+        "phone": "",
+        "web_link": ""
+    },
+    {
+        "name": "Columbia",
+        "category": "Deporte",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5151",
+        "web_link": "www.columbiasportswear.com.ar"
+    },
+    {
+        "name": "Como Quieres",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "UNO",
+        "phone": "4778-5095",
+        "web_link": "www.comoquieres.com.ar"
+    },
+    {
+        "name": "Complot",
+        "category": "Mujer",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5128",
+        "web_link": "www.complot.com.ar"
+    },
+    {
+        "name": "Cr\u00eaperie",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Nivel Uno",
+        "phone": "",
+        "web_link": ""
+    },
+    {
+        "name": "Cheeky",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5030",
+        "web_link": "www.cheeky.com.ar"
+    },
+    {
+        "name": "Definit",
+        "category": "Servicios",
+        "shopping_location": "Nivel UNO",
+        "phone": "",
+        "web_link": "definit.com.ar"
+    },
+    {
+        "name": "Delsey",
+        "category": "Varios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5120",
+        "web_link": "www.delsey.com.ar"
+    },
+    {
+        "name": "Desiderata",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5149",
+        "web_link": "www.desiderata.com.ar"
+    },
+    {
+        "name": "Elepants",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Uno",
+        "phone": "",
+        "web_link": "www.elepants.com.ar"
+    },
+    {
+        "name": "Estancias",
+        "category": "Mujer",
+        "shopping_location": "Nivel Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "estanciaschiripa.com.ar"
+    },
+    {
+        "name": "Eyelit",
+        "category": "Hombre",
+        "shopping_location": "Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "eyelit.com.ar"
+    },
+    {
+        "name": "Forever 21",
+        "category": "Mujer",
+        "shopping_location": "Nivel Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": ""
+    },
+    {
+        "name": "Giro Didactico",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel Uno",
+        "phone": "",
+        "web_link": "www.girodidactico.com"
+    },
+    {
+        "name": "Grabatto",
+        "category": "Varios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5072",
+        "web_link": "www.gbtgs.com"
+    },
+    {
+        "name": "Grimoldi",
+        "category": "Marroquiner\u00eda",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5045",
+        "web_link": "www.grimoldi.com"
+    },
+    {
+        "name": "Grisino",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5054",
+        "web_link": "www.grisino.com"
+    },
+    {
+        "name": "Havanna",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5135",
+        "web_link": "www.havanna.com.ar"
+    },
+    {
+        "name": "Home Collection",
+        "category": "Hogar",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5180",
+        "web_link": "www.homecollection.com.ar"
+    },
+    {
+        "name": "India Style",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5055",
+        "web_link": "www.indiastyle.com.ar"
+    },
+    {
+        "name": "Isadora",
+        "category": "Accesorios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5098",
+        "web_link": "ar.isadoraonline.com"
+    },
+    {
+        "name": "Juleriaque",
+        "category": "Varios",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5171",
+        "web_link": "www.juleriaque.com.ar"
+    },
+    {
+        "name": "Kio",
+        "category": null,
+        "shopping_location": "Luis Mar\u00eda Campo",
+        "phone": "",
+        "web_link": ""
+    },
+    {
+        "name": "Kosiuko",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5139",
+        "web_link": "www.kosiuko.com"
+    },
+    {
+        "name": "La Martina",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5172",
+        "web_link": "www.lamartina.com.ar"
+    },
+    {
+        "name": "Lacoste",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5060",
+        "web_link": "ar.lacoste.com"
+    },
+    {
+        "name": "Las Pepas",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5076",
+        "web_link": "www.laspepas.com.ar"
+    },
+    {
+        "name": "Le Pain Quotidien",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Arce",
+        "phone": "4778-5062",
+        "web_link": "lepainquotidien.com/ar/es/"
+    },
+    {
+        "name": "Levi\"s",
+        "category": "Mujer/Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5039",
+        "web_link": "www.levi.com.ar"
+    },
+    {
+        "name": "Little Akkiabara",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5051 / 5183",
+        "web_link": "littleakiabara.com"
+    },
+    {
+        "name": "Mar\u00eda Cher",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5165",
+        "web_link": "www.maria-cher.com.ar"
+    },
+    {
+        "name": "Mar\u00eda Rivolta",
+        "category": "Accesorios",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5099",
+        "web_link": "www.mariarivolta.com"
+    },
+    {
+        "name": "Markova",
+        "category": "Mujer",
+        "shopping_location": "Nivel Arce",
+        "phone": "",
+        "web_link": "markova.com"
+    },
+    {
+        "name": "McCaf\u00e9",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5109",
+        "web_link": "www.mcdonalds.com.ar/menu/mc-cafe"
+    },
+    {
+        "name": "McDonald's",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5115 / 4576-5810",
+        "web_link": "www.mcdonalds.com.ar"
+    },
+    {
+        "name": "Mimo & Co.",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5096",
+        "web_link": "www.mimo.com.ar"
+    },
+    {
+        "name": "Mishka",
+        "category": "Marroquiner\u00eda",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5187",
+        "web_link": "www.mishka.com.ar"
+    },
+    {
+        "name": "Morph",
+        "category": "Hogar",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5198",
+        "web_link": "morph.com.ar"
+    },
+    {
+        "name": "Mostaza",
+        "category": "Gastronom\u00eda",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5123",
+        "web_link": "www.mostazaweb.com.ar"
+    },
+    {
+        "name": "Na\u00edma",
+        "category": "Mujer",
+        "shopping_location": "Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "naima.com.ar"
+    },
+    {
+        "name": "Nespresso",
+        "category": "Varios",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5026",
+        "web_link": "www.nespresso.com/ar/"
+    },
+    {
+        "name": "Okko Kitchen",
+        "category": "Hogar",
+        "shopping_location": "Uno",
+        "phone": "",
+        "web_link": "www.okko.com.ar"
+    },
+    {
+        "name": "Omint",
+        "category": null,
+        "shopping_location": "UNO",
+        "phone": "",
+        "web_link": ""
+    },
+    {
+        "name": "OneClick",
+        "category": "Tecnolog\u00eda",
+        "shopping_location": "Nivel ARCE",
+        "phone": "0800-345-1663",
+        "web_link": "www.oneclickstore.com/ar/"
+    },
+    {
+        "name": "OPI Wella",
+        "category": "Varios",
+        "shopping_location": "Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "https://www.opi.com"
+    },
+    {
+        "name": "Osito Azul",
+        "category": "Ni\u00f1os/Teens",
+        "shopping_location": "Nivel Uno",
+        "phone": "",
+        "web_link": "www.ositoazul.com.ar"
+    },
+    {
+        "name": "Oxford Polo Club",
+        "category": "Hombre",
+        "shopping_location": "Nivel Uno",
+        "phone": "",
+        "web_link": "poloclub.com.ar"
+    },
+    {
+        "name": "Pago F\u00e1cil - Western Union",
+        "category": "Servicios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5084",
+        "web_link": "www.e-pagofacil.com"
+    },
+    {
+        "name": "Pandora",
+        "category": "Accesorios",
+        "shopping_location": "Luis Maria Campos",
+        "phone": "4778-5032",
+        "web_link": "pandora.net/es-ar"
+    },
+    {
+        "name": "Paula Cahen D'Anvers",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5111",
+        "web_link": "www.paulacahendanvers.com.ar"
+    },
+    {
+        "name": "Pelukids",
+        "category": "Servicios",
+        "shopping_location": "Nivel Uno",
+        "phone": "47785138",
+        "web_link": "pelukids.com.ar"
+    },
+    {
+        "name": "Penguin",
+        "category": "Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5097",
+        "web_link": "www.penguinargentina.com"
+    },
+    {
+        "name": "Portsaid",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5064",
+        "web_link": "www.portsaid.com.ar"
+    },
+    {
+        "name": "Prototype",
+        "category": "Hombre",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5103",
+        "web_link": "www.prototype.com.ar"
+    },
+    {
+        "name": "Pr\u00fcne",
+        "category": "Marroquiner\u00eda",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5046",
+        "web_link": "www.prune.com.ar"
+    },
+    {
+        "name": "Ramira",
+        "category": "Accesorios",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5029",
+        "web_link": "www.ramira.com.ar"
+    },
+    {
+        "name": "Rapsodia",
+        "category": "Mujer",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5110",
+        "web_link": "www.rapsodia.com.ar"
+    },
+    {
+        "name": "Rever Pass",
+        "category": "Hombre",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5168",
+        "web_link": "www.reverpass.com"
+    },
+    {
+        "name": "Rochas",
+        "category": "Hombre",
+        "shopping_location": "Nivel Luis Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "rochasshop.com.ar"
+    },
+    {
+        "name": "Samsung",
+        "category": "Tecnolog\u00eda",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5049",
+        "web_link": "www.samsung.com/ar/"
+    },
+    {
+        "name": "Sel\u00fa",
+        "category": "Mujer",
+        "shopping_location": "Lu\u00eds Mar\u00eda Campos",
+        "phone": "",
+        "web_link": "www.selu.com.ar"
+    },
+    {
+        "name": "Simmons",
+        "category": "Hogar",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5140",
+        "web_link": "www.simmons.com.ar"
+    },
+    {
+        "name": "Sweet",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5134",
+        "web_link": "www.sweet.com.ar"
+    },
+    {
+        "name": "Tienda L\u00edder",
+        "category": "Accesorios",
+        "shopping_location": "Arce",
+        "phone": "",
+        "web_link": "www.tiendalideroficial.com.ar"
+    },
+    {
+        "name": "Tucci",
+        "category": "Mujer",
+        "shopping_location": "Luis Mar\u00eda Campos",
+        "phone": "4778-5043",
+        "web_link": "www.tucciweb.com"
+    },
+    {
+        "name": "Valtik Care & Beauty",
+        "category": "Servicios",
+        "shopping_location": "Nivel Uno",
+        "phone": "4778-5078",
+        "web_link": "instagram.com/valtikbeauty/"
+    },
+    {
+        "name": "Wanama",
+        "category": "Mujer",
+        "shopping_location": "Nivel L.M. CAMPOS",
+        "phone": "4778-5193",
+        "web_link": "www.wanama.com"
+    },
+    {
+        "name": "XL Extra Large",
+        "category": "Marroquiner\u00eda",
+        "shopping_location": "Nivel ARCE",
+        "phone": "4778-5074",
+        "web_link": "www.xl.com.ar"
+    },
+    {
+        "name": "Yenny",
+        "category": "Varios",
+        "shopping_location": "Nivel UNO",
+        "phone": "4778-5137",
+        "web_link": "www.yenny-elateneo.com"
+    },
+    {
+        "name": "Zwass",
+        "category": "Marroquiner\u00eda",
+        "shopping_location": "Uno",
+        "phone": "4778-5082",
+        "web_link": ""
+    }
+]
