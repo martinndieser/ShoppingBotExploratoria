@@ -1,0 +1,34 @@
+[
+  {
+    "text": "Yo nací en el 1997, hoy en día tengo 30 años",
+    "entities": [
+      {
+        "start": 37,
+        "end": 39,
+        "value": "30",
+        "entity": "edad"
+      }
+    ],
+    "predicted_entities": [
+      {
+        "entity": "edad",
+        "start": 14,
+        "end": 18,
+        "confidence_entity": 0.5227910876274109,
+        "value": "1997",
+        "extractor": "DIETClassifier"
+      },
+      {
+        "entity": "edad",
+        "start": 37,
+        "end": 39,
+        "confidence_entity": 0.9545925259590149,
+        "value": "30",
+        "extractor": "DIETClassifier",
+        "processors": [
+          "EntitySynonymMapper"
+        ]
+      }
+    ]
+  }
+]

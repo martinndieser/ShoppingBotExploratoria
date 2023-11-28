@@ -1,0 +1,46 @@
+version: "3.1"
+
+rules:
+
+- rule: Decirle al usuario que reformule su mensaje que dió bajo en el score de NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_fallback
+
+
+- rule: Brindar productos registrados
+  steps:
+    - intent: saber_productos_disponibles
+    - action: action_nombrar_productos_disponibles
+
+
+- rule: Brindar horario del shopping
+  steps:
+    - intent: saber_horario_de_atencion_del_shopping
+    - action: utter_horarios
+
+
+- rule: Brindar ubicación del shopping
+  steps:
+    - intent: saber_ubicacion_del_shopping
+    - action: utter_ubicacion
+
+
+- rule: Brindar categorias de los locales
+  steps:
+    - intent: saber_categorias
+    - action: action_nombrar_categorias
+
+
+- rule: Brindar locales para una categoria
+  steps:
+    - intent: saber_locales_en_categoria
+      entities:
+        - categoria
+    - action: action_nombrar_locales_en_categoria
+
+
+- rule: Despedirse del usuario
+  steps:
+  - intent: despedida
+  - action: utter_despedirse

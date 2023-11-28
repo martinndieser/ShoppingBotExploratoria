@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Como llego al shopping?",
+    "intent": "saber_ubicacion_del_shopping",
+    "intent_prediction": {
+      "name": "saber_ubicacion_en_el_shopping",
+      "confidence": 0.9474802017211914
+    }
+  },
+  {
+    "text": "que se vende en esa categoria?",
+    "intent": "saber_productos_disponibles_por_categoria",
+    "intent_prediction": {
+      "name": "decime_la_categoria_de_un_local",
+      "confidence": 0.7854453921318054
+    }
+  }
+]

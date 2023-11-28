@@ -1,0 +1,509 @@
+version: "3.1"
+nlu:
+- intent: hay_oferta
+  examples: |
+    - Hay alguna promoción ahora?
+    - Que ofertas hay?
+    - Me podes contar si hay alguna oferta en el shopping?
+    - Hay alguna oferta en alguna de las categorias?
+    - Hay algún descuento?
+- intent: respuesta_pregunta_si
+  examples: |
+    - Si quiero
+    - Si me ayudas un monton
+    - Si soy un cliente habitual
+    - Si soy un comprador habitual
+    - Si necesito esto para continuar
+- intent: saber_ubicacion_del_shopping
+  examples: |
+    - cual es la dirección del shopping
+    - Necesito la dirección del shopping
+    - Me pasas la ubicación del shopping por Google maps
+    - como era la dirección del shopping?
+- intent: saber_horario_de_atencion_del_shopping
+  examples: |
+    - Cuales son los horarios del shopping
+    - De que hora hasta que hora estan abiertos
+    - A que hora puedo pasar por el shopping
+    - Que horarios y dias esta abierto el shopping
+    - de que hora a que hora esta abierto el shopping
+- intent: respuesta_pregunta_no
+  examples: |
+    - No quiero
+    - No no lo soy
+    - No gracias
+    - No no soy un comprador habitual
+    - No no soy
+- intent: decir_genero
+  examples: |
+    - Mi genero es [Masculino](genero)
+    - Yo me identifico como [Masculino](genero)
+    - Considero que soy una [Femenino](genero)
+    - En mi DNI dice que soy [Femenino](genero)
+- intent: decir_edad
+  examples: |
+    - Mi edad es [15](edad) años
+    - Yo tengo [42](edad) recien cumplidos
+    - Soy del 2003, por lo que tengo [23](edad) años
+    - Tengo [70](edad) años de antiguedad
+    - [30](edad) años
+    - Yo nací en el 1997, hoy en día tengo [30](edad) años
+    - Tengo [19](edad) años
+- intent: nombrar_categorias_de_interes
+  examples: |
+    - Si son de mi interes la siguientes categorias: [Mujer](categorias_de_interes), [Varios](categorias_de_interes), [Gastronomía](categorias_de_interes).
+    - [Hogar](categorias_de_interes), [Accesorios](categorias_de_interes), [Mujer/Hombre](categorias_de_interes)
+    - me gustan [Mujer/Hombre](categorias_de_interes), [Deporte](categorias_de_interes), [Tecnología](categorias_de_interes)
+    - No no tengo ningún interes en particular
+    - Me interesan las categorias de [mujer](categorias_de_interes), [hombre](categorias_de_interes) y [hogar](categorias_de_interes)
+    - Las que me interesan son [Varios](categorias_de_interes), [Hogar](categorias_de_interes) y [Hombre](categorias_de_interes)
+    - Me interesan las categorias de [Hogar](categorias_de_interes), [Deporte](categorias_de_interes) y [Mujer](categorias_de_interes)
+    - las categorias que me interesan son las de [hombre](categorias_de_interes) y [deporte](categorias_de_interes)
+- intent: quiero_comprar_pero_no_especifica_producto
+  examples: |
+    - Quiero hacer una compra
+    - Necesito comprar
+    - Voy a hacer una compra
+    - estoy queriendo hacer una compra
+    - como empiezo para hacer mi compra en el shopping
+- intent: quiero_comprar_dado_producto
+  examples: |
+    - que local es bueno para comprar un [mueble](producto)
+    - quiero comprar una [remera polo](producto)
+    - estoy buscando comprar unos [lentes](producto)
+    - necesito comprar una [pelota] de futbol(producto)
+    - donde puedo pedir una [hamburguesa](producto)
+    - estoy buscando comprar un [anillo](producto)
+    - quiero comprar un [mueble](producto), que local hay
+    - quiero adquirir una [lámpara](producto) para mi pieza, que locales puedo visitar
+    - quiero comprar un [auto](producto)
+    - Cuales son los mejores locales para comprar un [mueble](producto)
+    - ranking de los locales para adquirir una [pelota](producto)
+    - decime los locales para comprar unos [tacos](producto)
+    - cual local o locales me recomendas para comprar un [anillo](producto)
+- intent: quiero_hacer_una_queja
+  examples: |
+    - quiero hacer un reclamo
+    - me quiero quejar porque
+    - quiero hacer una queja
+    - quiero levantar una queja contra un local
+    - quiero hacer una queja porque esto no puede ser
+    - estoy reclamando porque me paso algo
+- intent: quiero_hacer_un_reclamo_por_x_razon
+  examples: |
+    - quiero reclamar porque tuve una muy mala atención en un local de su shopping
+    - quiero presentar una queja porque el estacionamiento esta en muy mal estado
+    - me estoy quejando porque la atención que recibí en el shopping fue mala
+    - mi reclamo viene porque los baños que hay en el shopping no estan en las condiciones aptas
+    - me estoy quejando porque su servicio es muy bueno, pero hay algunos locales que tienen una mala atención al cliente
+    - me gustaria presentar una queja porque recibí una muy mala atención en el local [Markova](local)
+    - quiero hacer una queja porque recibí una mediocre atención en el local [Lacoste](local) por parte de un empleado, y eso no esta bien
+- intent: quiero_hacer_un_reclamo_por_producto_defectuoso
+  examples: |
+    - compre un producto en el local [Lacoste](local) y no funciona, quiero hacer una queja
+    - quiero hacer una queja porque el producto no anda bien
+    - estoy realizando un reclamo porque el producto que compre ayer en un local no anda
+    - me pasa que al producto que compre no le funciona una de las partes
+    - uno de los productos que compre en uno de los locales de su shopping dejo de funcionar de repente
+    - quiero hacer una queja en el local [Markova](local) porque el producto anda mal
+    - uno de los productos que compre en su shopping dejo de funcionar
+    - el producto dejo de funcionar
+    - el producto que compre en el shopping no anda
+    - quiero presentar una queja, porque el producto que compre no anda
+    - quiero hacer un reclamo, porque mi producto no andaa
+    - quiero presentar una queja en el local [Simmons](local) por que mi es producto defectuoso
+    - quiero quejarme porque el producto que compre no funciona
+    - quiero hacer una queja en el local [Juleriaque](local) por un producto defectuoso
+    - quiero quejarme por un producto defectuoso
+- intent: decir_en_que_local_lo_compro
+  examples: |
+    - lo compre en (Simmons)[local] al producto defectuoso
+    - el producto defectuoso lo compre en [Lacoste](local) al producto defectuoso
+    - cuando lo compre lo hice en [Markova](local)
+    - si realice la compra en [Juleriaque](local)
+    - lo compre en el local de [Lacoste](local)
+    - en el local [Isadora](local)
+    - fue comprado en [Kosiuko](local)
+    - [India Style](local)
+    - Lo compre en el local [Grabatto](local)
+    - lo compre en [Simmons](local)
+- intent: no_me_ayudo
+  examples: |
+    - Lo que me dijiste no me ayudo
+    - Pero eso no es a lo que me referia
+    - No es lo que quiero eso
+    - Creo que lo que me dijiste es incorrecto
+    - Lo que me diste no es correcto
+    - La información no esta bien, porfavor damela de nuevo
+- intent: saber_productos_disponibles_por_categoria
+  examples: |
+    - Cuales son los productos de los locales de la categoria [Hombre](categoria)
+    - ¿Que productos se venden en los locales de la categoria de [Accesorios](categoria)?
+    - decime los productos que hay en los locales de la categoria de [Deportes](categoria)
+    - cuales son los productos que tienen los locales de esa categoria?
+    - que venden los locales de esa categoria?
+    - decime los productos de la categoria [hogar](categoria)
+    - que productos hay en la categoria [Accesorios](categoria)
+    - que productos hay en la categoria [hombre](categoria)
+- intent: saber_productos_disponibles
+  examples: |
+    - Me podes dar la lista de productos?
+    - Que productos hay?
+    - Cuales son los productos disponibles?
+    - Dame la lista de productos registrados
+    - Decime que productos hay registrados
+- intent: que_productos_puedo_comprar_en_local
+  examples: |
+    - que puedo comprar en el local de [arredo](local)
+    - que se vende en el local de [Markova](local)
+    - dame lo que vende el local [Sweet](local)
+    - que productos se pueden comprar ahi?
+    - que productos tiene el local?
+    - que venden ahi?
+    - dame la lista de productos que se venden en [Simmons](local)
+    - que es lo que venden en el local [Grabatto](local)
+- intent: es_recomendable_el_producto_en_el_local
+  examples: |
+    - Es recomendable comprar un [bolso](producto) en [Markova](local)
+    - es bueno [rever pass](local) para comprar un [boxer](producto)?
+    - Me recomendas comprar un [vestido](producto) en [Wanama](local)
+    - Es bueno comprar un [mueble](producto) en el local de [Sweet](local)
+    - Es una buena idea hacer la compra de unos [tacos](producto) en [Rapsodia](local)
+    - Que opinas de mi idea sobre hacer la compra de un [cinturón](producto) en [mishka](local)
+    - Es recomendable comprar unas [savanas](producto) en el local [Simmons](local)
+    - yo quiero comprar un [mueble](producto) en [Wanama](producto)
+    - es recomendable comprarlo en [Markova](local)
+    - Entonces vale la pena comprarlo en [McDonald](local)
+    - El producto este es bueno comprarlo en [Delsey](local)
+- intent: decime_la_categoria_de_un_local
+  examples: |
+    - Me decis la categoria del local [Simmons](local)
+    - Cual es la categoria de [Markova](local)
+    - Como se clasifica el local de (Sweet)(local)
+    - cual es la categoria?
+    - en que categoria se encuentra?
+    - que categoria es el local?
+    - a que categoria pertenece el local?
+- intent: recomendame_un_local_dado_una_categoria
+  examples: |
+    - Que local de la categoria [Deporte](categoria) me recomendas ir?
+    - Cual es el mejor local de la categoría de [Mujer](categoria)?
+    - De todos los locales de la categoria [Hombre](categoria) cual me recomendas ir?
+    - decime un local de la categoria [Varios](categoria)
+    - Que local de la categoria [Mujer](categoria) me recomendas que visite?
+    - decime un local de la categoria [Accesorios](categoria) para ir
+    - decime un local de la categoria [Mujer](categoria) para ir
+- intent: quiero_realizar_una_compra_en_el_local
+  examples: |
+    - quiero realizar una compra en [Lacoste](local)
+    - quiero comprar una remera en [Markova](local)
+    - como realizo un pedido en [Mostaza](local)
+    - como realizo una compra en el local de [Lacoste](local)
+    - no se como hacer para realizar compra en el local [Juleriaque](local)
+    - Quiero comprar unos alfajores en el local de [Havanna](local), me das más info?
+    - Quiero comprar en el local [Simmons](local), como puedo hacer
+    - quiero saber como hago la compra del producto [Sweet](local) en el local?
+    - si porfavor, quiero saber como puedo hacer para comprar algo en ese local
+    - me interesaria hacer una compra en [Mostaza](local) para comer
+- intent: saber_pagina_web_local
+  examples: |
+    - Me das la página web de [Sweet](local)
+    - cual es la página web
+    - me decis la página web del local?
+    - Necesito saber la página web del local [Ayres](local)
+    - Cual es la página web de [McDonald](local)
+    - me podes decir su página web también
+- intent: saber_ubicacion_en_el_shopping
+  examples: |
+    - En que parte del shopping esta [Grimoldi](local)
+    - Necesito saber donde se encuentra [Portsaid](local)
+    - Porfavor decime en que parte del shopping esta [Mishka](local)
+    - A que nivel se encuentra el local [Simmons](local)
+    - Necesito saber la ubicacion del local [Pandora](local)
+    - Como llego a ese local?
+    - Me decis como llegar?
+    - Donde esta ubicado?
+    - En que parte del shopping esta?
+    - Donde se encuentra ubicado el local [Prüne](local)
+    - Como hago para llegar a [Samsung](local) dentro del shopping
+    - entiendo, pero yo necesito saber en donde se encuentra el local [Arredo](local)
+    - cual era su ubicación en el shopping
+- intent: saber_numero_de_telefono
+  examples: |
+    - Me dirias el telefono del local [McDonald](local)
+    - Necesito el numero del local [Columbia](local)
+    - Me podes dar el número del local [Definit](local)
+    - me das el número de telefono?
+    - cual es su número de telefono?
+    - como los contacto via telefonica?
+    - Necesito que me des el número de contacto de [Delsey](local)
+    - Me podes decir el teléfono para contactarme con [Lacoste](local)
+- intent: saber_locales_en_categoria
+  examples: |
+    - Cuales son los locales en la categoria de [moda](categoria)
+    - Me podrias decir los locales para la categoria de [hombre](categoria)
+    - Dame los locales para la categoria [Accesorios](categoria)
+    - Necesito los locales para la categoria [Hombre](categoria)
+    - Me podrias decir cuales son los locales que estan en la categoria de [mujer](categoria)
+    - cuales son los locales para la categoria de [Hogar](categoria)
+    - cuales son los locales en la categoria de [Deportes](categoria)
+- intent: saber_categorias
+  examples: |
+    - Me podrias listar las categorias del shopping?
+    - Me podrias decir las distintas categorias del shopping?
+    - Que categorias posee el shopping?
+    - Cuales son las categorias que agrupan a los locales?
+    - Decime porque categorias agrupan a los locales
+    - Me nombras las categorias?
+    - Nombrame las categorias porfavor
+- intent: saludo
+  examples: |
+    - Hola
+    - Hola, ¿como andas?
+    - Buen día
+    - Buenos días
+    - Hola, Que tal
+    - hola buenas
+    - /start
+- intent: gracias_por_la_ayuda
+  examples: |
+    - gracias por ayudarme
+    - gracias me fue de ayuda
+    - esta bien, gracias
+    - gracias me sirvió
+    - muchas gracias por ayudarme!
+    - uyy muchas gracias
+    - muchas gracas
+- intent: introduccion
+  examples: |
+    - mi nombre es [Juan](nombre)
+    - soy [Agustin](nombre)
+    - me llamo [Matias](nombre)
+    - me dicen [Pepe](nombre)
+    - soy conocido como [Pedro](nombre)
+    - decime [Martín](nombre)
+    - mi apodo es (Chuki)[nombre]
+    - me llamo [Jay](nombre)
+    - Me llamo [martin](nombre)
+- intent: despedida
+  examples: |
+    - Adiós
+    - Hasta luego
+    - Chau
+    - Bye
+    - Hasta la próxima
+    - Nos vemos
+    - Bueno adios gracias por la atención
+- lookup: edad
+  examples: |
+    - 14
+    - 15
+    - 16
+    - 17
+    - 18
+    - 19
+    - 20
+    - 21
+    - 22
+    - 23
+    - 24
+    - 25
+    - 26
+    - 27
+    - 28
+    - 29
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    - 36
+    - 37
+    - 38
+    - 39
+    - 40
+    - 41
+    - 42
+    - 43
+    - 44
+    - 45
+    - 46
+    - 47
+    - 48
+    - 49
+    - 50
+    - 51
+    - 52
+    - 53
+    - 54
+    - 55
+    - 56
+    - 57
+    - 58
+    - 59
+    - 60
+    - 61
+    - 62
+    - 63
+    - 64
+    - 65
+    - 66
+    - 67
+    - 68
+    - 69
+    - 70
+    - 71
+    - 72
+    - 73
+    - 74
+    - 75
+    - 76
+    - 77
+    - 78
+    - 79
+    - 80
+- lookup: genero
+  examples: |
+    - Masculino
+    - Femenino
+- lookup: categoria, categorias_de_interes
+  examples: |
+    - Accesorios
+    - Deporte
+    - Gastronomía
+    - Hogar
+    - Hombre
+    - Marroquinería
+    - Mujer
+    - Mujer/Hombre
+    - Niños/Teens
+    - Servicios
+    - Tecnología
+    - Varios
+- lookup: local
+  examples: |
+    - + Visión
+    - 47 Street
+    - A.Y. Not Dead
+    - Adriana Costantini
+    - Akiabara
+    - almundo.com
+    - Alvarado
+    - Allô Martinez
+    - Arredo
+    - Awada
+    - Ayres
+    - Beneida
+    - Bensimon
+    - Besha
+    - Broer
+    - CALA
+    - Caro Cuore
+    - Centro Rossi
+    - Ceremony
+    - Columbia
+    - Como Quieres
+    - Complot
+    - Crêperie
+    - Cheeky
+    - Definit
+    - Delsey
+    - Desiderata
+    - Elepants
+    - Estancias
+    - Eyelit
+    - Forever 21
+    - Giro Didactico
+    - Grabatto
+    - Grimoldi
+    - Grisino
+    - Havanna
+    - Home Collection
+    - India Style
+    - Isadora
+    - Juleriaque
+    - Kosiuko
+    - La Martina
+    - Lacoste
+    - Las Pepas
+    - Le Pain Quotidien
+    - Levi's
+    - Little Akkiabara
+    - María Cher
+    - María Rivolta
+    - Markova
+    - McCafé
+    - McDonald's
+    - Mimo & Co.
+    - Mishka
+    - Morph
+    - Mostaza
+    - Naíma
+    - Nespresso
+    - Okko Kitchen
+    - OneClick
+    - OPI Wella
+    - Osito Azul
+    - Oxford Polo Club
+    - Pago Fácil - Western Union
+    - Pandora
+    - Paula Cahen D'Anvers
+    - Pelukids
+    - Penguin
+    - Portsaid
+    - Prototype
+    - Prüne
+    - Ramira
+    - Rapsodia
+    - Rever Pass
+    - Rochas
+    - Samsung
+    - Selú
+    - Simmons
+    - Sweet
+    - Tienda Líder
+    - Tucci
+    - Valtik Care & Beauty
+    - Wanama
+    - XL Extra Large
+    - Yenny
+    - Zwass
+- lookup: producto
+  examples: |
+    - collar
+    - lentes
+    - anillo
+    - pesas
+    - pelota
+    - raqueta
+    - hamburguesa
+    - comida
+    - snacks
+    - savanas
+    - mueble
+    - lámpara
+    - boxer
+    - remera polo
+    - kit de afeitado
+    - cartera
+    - cinturon
+    - cuero
+    - vestido
+    - bolso
+    - tacos
+    - remera
+    - jean
+    - pantalon chino
+    - mochila
+    - ropa para niño
+    - juego de mesa
+    - pagar servicios
+    - masaje
+    - reparación
+    - celular
+    - auricular
+    - laptop
+    - termo
+    - cuaderno
+    - anillo

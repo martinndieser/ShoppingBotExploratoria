@@ -1,0 +1,2 @@
+sender_id, nombre, edad, genero, es_cliente_habitual, categorias_de_interes
+5957242060,martin,20,Masculino,True,['deporte']

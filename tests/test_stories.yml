@@ -1,0 +1,237 @@
+version: "3.1"
+
+
+stories:
+- story: Nuevo cliente
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - user: |
+     Me llamo [martin](nombre)
+    intent: introduccion
+  - action: utter_pregunta_cliente_habitual
+  - user: |
+      No no soy un comprador habitual
+    intent: respuesta_pregunta_no
+
+  - action: utter_pregunta_edad
+  - user: |
+      Yo tengo [42](edad)
+    intent: decir_edad
+
+
+  - action: utter_pregunta_genero
+  - user: |
+      Mi genero es [Masculino](genero)
+    intent: decir_genero
+
+  - action: action_nombrar_categorias
+  - action: utter_pregunta_categorias_de_interes
+  - user: |
+      Me interesan las categorias de [mujer](categorias_de_interes), [hombre](categorias_de_interes) y [hogar](categorias_de_interes)
+    intent: nombrar_categorias_de_interes
+
+  - action: action_guardar_contacto
+  - action: utter_bienvenido
+  - action: action_chequear_oferta
+
+
+- story: No se donde comprar X producto, pero se la categoria
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - slot_was_set:
+    - es_conocido: true
+  - action: action_chequear_oferta
+  - user: |
+      decime un local de la categoria [Mujer](categoria) para ir
+    intent: recomendame_un_local_dado_una_categoria
+  - action: utter_recomendame_local_en_una_categoria
+
+  - user: |
+      Bueno, especificamente estoy buscando comprar unos [lentes](producto)
+    intent: quiero_comprar_dado_producto
+  - action: action_identificar_categoria_producto
+  - action: action_dar_mejores_locales_para_determinado_producto
+  - action: action_chequear_oferta
+  - action: utter_ayuda_en_como_comprar
+
+
+- story: Decime los contactos de un local
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - slot_was_set:
+    - es_conocido: true
+  - action: action_chequear_oferta
+  - user: |
+      Me decis el número de telefono de [Simmons](local), necesito consultarles algo.
+    intent: saber_numero_de_telefono
+  - slot_was_set:
+    - local: Simmons
+  - action: action_dar_numero_de_telefono
+  - user: |
+      Uh bien, me viene perfecto, me podes decir su página web también
+    intent: saber_pagina_web_local
+  - action: action_dar_pagina_web_local
+  - user: |
+      cual era la ubicación del local en el shopping?
+
+    intent: saber_ubicacion_en_el_shopping
+  - action: action_dar_ubicacion_de_local
+  - user: |
+      Y de que hora a que hora esta abierto el shopping asi puedo pasar?
+    intent: saber_horario_de_atencion_del_shopping
+  - action: utter_horarios
+
+- story: Quiero comprar algo, pero solo conozco el nombre del local
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - slot_was_set:
+    - es_conocido: true
+  - action: action_chequear_oferta
+  - user: |
+      Me estaba preguntando que es lo que venden en el local [Grabatto](local).
+    intent: que_productos_puedo_comprar_en_local
+  - action: action_dar_productos_de_local
+  - user: |
+      Che, y a que categoria pertenece el local??
+    intent: decime_la_categoria_de_un_local
+  - action: action_dar_categoria_de_un_local
+
+
+- story: Quiero comprar algo, pero no aclara el producto de entrada
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - slot_was_set:
+    - es_conocido: true
+  - action: action_chequear_oferta
+  - user: |
+      Quiero hacer una compra
+    intent: quiero_comprar_pero_no_especifica_producto
+  - action: utter_preguntar_producto
+  - user: |
+      estoy buscando un [mueble](producto) para mi living
+    intent: quiero_comprar_dado_producto
+  - slot_was_set:
+    - producto
+  - action: action_identificar_categoria_producto
+  - action: action_dar_mejores_locales_para_determinado_producto
+  - action: action_chequear_oferta
+  - action: utter_ayuda_en_como_comprar
+  - user: |
+      si porfavor, me interesaria saber como hacer la compra en el local [Simmons](local)
+    intent: quiero_realizar_una_compra_en_el_local
+  - slot_was_set:
+      - local
+  - action: utter_como_realizar_una_compra
+
+- story: Quiero hacer una queja por un producto defectuoso para cliente habitual
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - user: |
+     Me llamo [martin](nombre)
+    intent: introduccion
+  - action: utter_pregunta_cliente_habitual
+  - user: |
+      Si soy un cliente habitual
+    intent: respuesta_pregunta_si
+  - slot_was_set:
+    - es_cliente_habitual: true
+
+  - action: utter_pregunta_edad
+  - user: |
+      Yo tengo [42](edad)
+    intent: decir_edad
+
+
+  - action: utter_pregunta_genero
+  - user: |
+      Mi genero es [Masculino](genero)
+    intent: decir_genero
+
+  - action: action_nombrar_categorias
+  - action: utter_pregunta_categorias_de_interes
+  - user: |
+      Me interesan las categorias de [deporte](categorias_de_interes) y [accesorios](categorias_de_interes)
+    intent: nombrar_categorias_de_interes
+
+  - action: action_guardar_contacto
+  - action: utter_bienvenido
+  - action: action_chequear_oferta
+  - user: |
+      me gustaria presentar una quiero hacer una queja en el local [Simmons](local) por producto defectuoso
+    intent: quiero_hacer_un_reclamo_por_producto_defectuoso
+  - action: utter_preguntar_que_local_lo_compro
+  - user: |
+      Lo compre en el local [Simmons](local)
+    intent: decir_en_que_local_lo_compro
+  - slot_was_set:
+    - local
+    - es_cliente_habitual
+  - action: utter_nombrar_politica_de_reembolsos_si_es_cliente_habitual
+
+
+- story: Quiero hacer una queja por un producto defectuoso para cliente habitual
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - slot_was_set:
+    - es_conocido: true
+  - action: action_chequear_oferta
+  - slot_was_set:
+    - es_cliente_habitual: true
+  - user: |
+      quiero hacer una queja en el local [Simmons](local) por producto defectuoso
+    intent: quiero_hacer_un_reclamo_por_producto_defectuoso
+  - action: utter_preguntar_que_local_lo_compro
+  - user: |
+      Lo compre en el local [Simmons](local)
+    intent: decir_en_que_local_lo_compro
+  - slot_was_set:
+    - local
+    - es_cliente_habitual
+  - action: utter_nombrar_politica_de_reembolsos_sino_es_cliente_habitual
+
+
+
+- story: Quiero hacer una queja pero de otra cosa que no es un producto
+  steps:
+  - user: |
+      Hola buenas
+    intent: saludo
+  - action: action_resetear
+  - action: action_saludar
+  - slot_was_set:
+    - es_conocido: true
+  - action: action_chequear_oferta
+  - slot_was_set:
+    - es_cliente_habitual: false
+  - user: |
+      quiero_hacer_un_reclamo_por_x_razon: quiero hacer una queja porque recibí una muy mala atención en el local [Simmons](local) por parte de una empleada que no me dejaba llevarme el [mueble](producto) a mi casa sin pagar
+    intent: quiero_hacer_un_reclamo_por_x_razon
+  - action: utter_pedir_disculpas_por_queja

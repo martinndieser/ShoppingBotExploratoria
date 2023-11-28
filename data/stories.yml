@@ -1,0 +1,277 @@
+version: "3.1"
+
+# posibles stories especificas:
+# pedir reembolso
+# contar experiencia en el shopping
+# pedirle recomendaciones de que hacer en el shopping
+# etc
+
+stories:
+  - story: Presentación (ya agendado)
+    steps:
+      - intent: saludo
+      - action: action_resetear
+      - action: action_saludar
+      - slot_was_set:
+        - es_conocido: true
+      - action: action_chequear_oferta
+      # aca ya estaria agendado y con los slots correspondientes cargados
+
+  - story: Presentación (sin agendar)
+    steps:
+      - intent: saludo
+      - action: action_resetear
+      - action: action_saludar
+      - slot_was_set:
+        - es_conocido: false
+      - intent: introduccion
+        entities:
+            - nombre
+
+      - action: utter_pregunta_cliente_habitual
+      - or:
+        - intent: respuesta_pregunta_si
+        - intent: respuesta_pregunta_no
+      - slot_was_set:
+        - es_cliente_habitual
+
+      - action: utter_pregunta_edad
+      - intent: decir_edad
+        entities:
+          - edad
+      - slot_was_set:
+        - edad
+
+      - action: utter_pregunta_genero
+      - intent: decir_genero
+        entities:
+          - genero
+      - slot_was_set:
+        - genero
+
+      - action: action_nombrar_categorias
+      - action: utter_pregunta_categorias_de_interes
+      - intent: nombrar_categorias_de_interes
+        entities:
+          - categorias_de_interes
+      - slot_was_set:
+        - categorias_de_interes
+
+      - action: action_guardar_contacto
+      - action: utter_bienvenido
+      - action: action_chequear_oferta
+
+  - story: Pregunta por oferta
+    steps:
+      - intent: hay_oferta
+      - slot_was_set:
+        - es_conocido: true
+      - action: action_chequear_oferta
+
+  
+
+  - story: Es recomendable comprar X producto en Y local
+    steps:
+      - intent: es_recomendable_el_producto_en_el_local
+        entities:
+          - local
+          - producto
+      - slot_was_set:
+          - local
+          - producto
+      - action: action_es_recomendable
+
+
+  - story: Quiero comprar un producto, pero no dice el producto en la entrada
+    steps:
+      - intent: quiero_comprar_pero_no_especifica_producto
+      - action: utter_preguntar_producto
+      - intent: quiero_comprar_dado_producto
+        entities:
+          - producto
+      - slot_was_set:
+        - producto
+      - checkpoint: flujo_compra
+
+
+  - story: Quiero comprar un producto, pero empieza con producto
+    steps:
+      - intent: quiero_comprar_dado_producto
+        entities:
+          - producto
+      - slot_was_set:
+          - producto
+      - checkpoint: flujo_compra
+
+  - story: Flujo de compra
+    steps:
+      - checkpoint: flujo_compra
+      - slot_was_set:
+          - producto
+      - action: action_identificar_categoria_producto
+      - action: action_dar_mejores_locales_para_determinado_producto
+      - action: action_chequear_oferta    
+      - action: utter_ayuda_en_como_comprar
+
+
+  - story: Como realizar una compra en dado local
+    steps:
+      - intent: quiero_realizar_una_compra_en_el_local
+        entities:
+          - local
+      - slot_was_set:
+          - local
+      - action: utter_como_realizar_una_compra
+
+
+  - story: Saber el número de teléfono de determinado local
+    steps:
+      - intent: saber_numero_de_telefono
+        entities:
+          - local
+      - slot_was_set:
+          - local
+      - action: action_dar_numero_de_telefono
+
+
+  - story: Saber la página web de determinado local
+    steps:
+      - intent: saber_pagina_web_local
+        entities:
+          - local
+      - slot_was_set:
+          - local
+      - action: action_dar_pagina_web_local
+
+
+  - story: Donde se encuentra un local en el shopping
+    steps:
+      - intent: saber_ubicacion_en_el_shopping
+        entities:
+          - local
+      - slot_was_set:
+          - local
+      - action: action_dar_ubicacion_de_local
+
+
+  - story: Decir que productos se venden en cierto local
+    steps:
+      - intent: que_productos_puedo_comprar_en_local
+        entities:
+          - local
+      - slot_was_set:
+          - local
+      - action: action_dar_productos_de_local
+
+
+  - story: Decir los productos disponibles de cierta categoria
+    steps:
+      - intent: saber_productos_disponibles_por_categoria
+        entities:
+          - categoria
+      - slot_was_set:
+          - categoria
+      - action: action_dar_productos_en_categoria
+
+
+  - story: Decir la categoria de un determinado local
+    steps:
+      - intent: decime_la_categoria_de_un_local
+        entities:
+          - local
+      - slot_was_set:
+          - local
+      - action: action_dar_categoria_de_un_local
+
+
+  - story: Recomendación de local en una categoria
+    steps:
+      - intent: recomendame_un_local_dado_una_categoria
+        entities:
+          - categoria
+      - slot_was_set:
+          - categoria
+      - action: utter_recomendame_local_en_una_categoria
+
+
+  - story: Lo que me dijiste me ayudo (happy path)
+    steps:
+      - intent: gracias_por_la_ayuda
+      - action: utter_cumplido
+
+  - story: Lo que me dijiste no me ayudo (sad path)
+    steps:
+      - intent: no_me_ayudo
+      - action: utter_usuario_inconforme
+
+  - story: Quiero realizar una queja pero no especifica razon
+    steps:
+      - intent: quiero_hacer_una_queja
+      - action: utter_preguntar_que_tipo_de_queja
+
+
+
+  - story: Quiero realizar por otro tema
+    steps:
+      - intent: quiero_hacer_un_reclamo_por_x_razon
+        entities:
+          - local
+          - producto
+          - categoria
+      - action: utter_pedir_disculpas_por_queja
+
+
+
+  - story: Quiero realizar una queja por producto defectuoso
+    steps:
+      - intent: quiero_hacer_un_reclamo_por_producto_defectuoso
+        entities:
+          - local
+      - action: utter_preguntar_que_local_lo_compro
+      - intent: decir_en_que_local_lo_compro
+        entities:
+         - local
+      - slot_was_set:
+        - local
+      - checkpoint: es_cliente_habitual_si_o_no
+
+  - story: Quiero realizar una queja por producto defectuoso (siendo cliente habitual)
+    steps:
+      - checkpoint: es_cliente_habitual_si_o_no
+      - slot_was_set:
+        - es_cliente_habitual: true
+      - action: utter_nombrar_politica_de_reembolsos_si_es_cliente_habitual
+
+  - story: Quiero realizar una queja por producto defectuoso (sin ser cliente habitual)
+    steps:
+      - checkpoint: es_cliente_habitual_si_o_no
+      - slot_was_set:
+        - es_cliente_habitual: false
+      - action: utter_nombrar_politica_de_reembolsos_sino_es_cliente_habitual
+  
+
+  - story: interactive_story_1
+    steps:
+    - intent: quiero_hacer_un_reclamo_por_x_razon
+    - action: utter_pedir_disculpas_por_queja
+    - intent: quiero_hacer_un_reclamo_por_producto_defectuoso
+    - action: utter_preguntar_que_local_lo_compro
+    - intent: decir_en_que_local_lo_compro
+      entities:
+        - local
+    - slot_was_set:
+      - es_cliente_habitual: false
+    - action: utter_nombrar_politica_de_reembolsos_sino_es_cliente_habitual
+
+  - story: interactive_story_2
+    steps:
+    - intent: quiero_hacer_un_reclamo_por_x_razon
+    - action: utter_pedir_disculpas_por_queja
+    - intent: quiero_hacer_un_reclamo_por_producto_defectuoso
+    - action: utter_preguntar_que_local_lo_compro
+    - intent: decir_en_que_local_lo_compro
+      entities:
+        - local
+    - slot_was_set:
+      - es_cliente_habitual: true
+    - action: utter_nombrar_politica_de_reembolsos_si_es_cliente_habitual
