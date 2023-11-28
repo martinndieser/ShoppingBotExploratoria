@@ -1,0 +1,168 @@
+version: '3.1'
+intents:
+- decime_la_categoria_de_un_local
+- decir_edad
+- decir_en_que_local_lo_compro
+- decir_genero
+- despedida
+- es_recomendable_el_producto_en_el_local
+- gracias_por_la_ayuda
+- hay_oferta
+- introduccion
+- nlu_fallback
+- no_me_ayudo
+- nombrar_categorias_de_interes
+- que_productos_puedo_comprar_en_local
+- quiero_comprar_dado_producto
+- quiero_comprar_pero_no_especifica_producto
+- quiero_hacer_un_reclamo_por_producto_defectuoso
+- quiero_hacer_un_reclamo_por_x_razon
+- quiero_hacer_una_queja
+- quiero_realizar_una_compra_en_el_local
+- recomendame_un_local_dado_una_categoria
+- respuesta_pregunta_no
+- respuesta_pregunta_si
+- saber_categorias
+- saber_horario_de_atencion_del_shopping
+- saber_locales_en_categoria
+- saber_numero_de_telefono
+- saber_pagina_web_local
+- saber_productos_disponibles
+- saber_productos_disponibles_por_categoria
+- saber_ubicacion_del_shopping
+- saber_ubicacion_en_el_shopping
+- saludo
+entities:
+- local
+- nombre
+- edad
+- genero
+- categorias_de_interes
+- categoria
+- producto
+- es_frecuente
+actions:
+- utter_preguntar_que_local_lo_compro
+- utter_nombrar_politica_de_reembolsos_sino_es_cliente_habitual
+- utter_pedir_disculpas_por_queja
+- utter_pregunta_cliente_habitual
+- utter_pregunta_edad
+- action_saludar
+- utter_pregunta_genero
+- utter_pregunta_categorias_de_interes
+- action_guardar_contacto
+- action_nombrar_categorias
+- utter_recomendame_local_en_una_categoria
+- action_identificar_categoria_producto
+- action_chequear_oferta
+- utter_como_realizar_una_compra
+- action_dar_numero_de_telefono
+- action_dar_pagina_web_local
+- action_nombrar_locales_en_categoria
+- action_dar_ubicacion_de_local
+- action_es_recomendable
+- action_dar_categoria_de_un_local
+- action_nombrar_productos_disponibles
+- action_resetear
+- action_dar_productos_en_categoria
+- action_dar_productos_de_local
+- action_dar_mejores_locales_para_determinado_producto
+slots:
+  nombre:
+    type: text
+    initial_value: null
+    mappings:
+    - type: from_entity
+      entity: nombre
+  categorias_de_interes:
+    type: list
+    initial_value: []
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: categorias_de_interes
+  genero:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: genero
+  edad:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: edad
+  es_cliente_habitual:
+    type: bool
+    initial_value: false
+    mappings:
+    - type: from_intent
+      value: true
+      intent: respuesta_pregunta_si
+    - type: from_intent
+      value: false
+      intent: respuesta_pregunta_no
+  categoria:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: categoria
+  local:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: local
+  producto:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: producto
+  es_conocido:
+    type: bool
+    initial_value: false
+    influence_conversation: true
+    mappings:
+    - type: custom
+responses:
+  utter_fallback:
+  - text: No entendí bien lo que dijiste, ¿Podes reformularlo?
+  utter_cumplido:
+  - text: Gracias {nombre}! fue un placer ayudarte, recuerda que estoy para ayudarte!
+  utter_despedirse:
+  - text: Adios {nombre}! espero que te haya sido de ayuda
+  utter_recomendame_local_en_una_categoria:
+  - text: Para darte buena recomendación de un local en la categoria {categoria}, necesito saber que producto estas buscando?
+  utter_como_realizar_una_compra:
+  - text: Hay dos formas de realizar compras en los locales del shopping, la primera y más segura es la de asistir de forma presencial. Otra posible forma es contactar ya sea via telefonica o a través de la página web del local. Aunque si bien es la opción más comoda, no todos los locales cuentan con ambas vías de comunicación.
+  utter_usuario_inconforme:
+  - text: Lamento que no te haya podido ayudar, si quieres una atención más personalizada puedes contactarte via mail con el soporte del shopping shopping@gmail.com. 🛍️🛍️🛍️🛍️
+  utter_pregunta_cliente_habitual:
+  - text: ¿Usted es un comprador habitual en el shopping?
+  utter_pregunta_categorias_de_interes:
+  - text: ¿Cuales son las categorias que más te interesan en el shopping?
+  utter_pregunta_edad:
+  - text: ¿Me podes decir tu edad?
+  utter_pregunta_genero:
+  - text: ¿Cual es tu genero (Masculino ó Femenino)?
+  utter_horarios:
+  - text: El shopping siempre se encuentra abiertos desde las 9:00 AM hasta las 18:00 PM de Lunes a Sabado.
+  utter_ubicacion:
+  - text: El shopping se encuentra ubicado en Av. Luis María Campos 901, C1426 CABA. Si necesitas más ayuda de como llegar, te recomiendo que visites este link https://www.google.com/maps/dir/-36.896768,-60.3357184/solar+shopping+argentina/@-35.738246,-60.5330532,8z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x95bcb5b8e8b96507:0x9da41a3a9ce76b3a!2m2!1d-58.4373399!2d-34.5680404?entry=ttu
+  utter_preguntar_producto:
+  - text: Que producto estas buscando comprar?
+  utter_ayuda_en_como_comprar:
+  - text: Si tienes alguna duda en como realizar la compra en algun local en especifico, te puedo ayudar dar unos consejos que te seran muy útiles.
+  utter_bienvenido:
+  - text: Hola {nombre} en que lo puedo ayudar?
+  utter_preguntar_que_tipo_de_queja:
+  - text: bueno está bien, quieres realizar una queja de un producto? queja de atención de un local o una queja en general sobre algún aspecto que no te gusto del shopping?
+  utter_preguntar_que_local_lo_compro:
+  - text: lamento que te haya sucedido esto. ¿me puedes decir en que local compraste el producto?
+  utter_nombrar_politica_de_reembolsos_sino_es_cliente_habitual:
+  - text: Esta bien, el shopping tiene una politica de reembolsos solo si el producto fue comprado hace menos de 30 dias, si ese es el caso entonces puede volver al local {local} y este sera efectuado sin problemas. En caso contrario no hay nada que hacer
+  utter_nombrar_politica_de_reembolsos_si_es_cliente_habitual:
+  - text: Esta bien, el shopping tiene una politica de reembolsos solo si el producto fue comprado hace menos de 30 dias, aunque como nosotros valoramos a nuestros clientes habituales podemos hacer una excepción a la regla. Puedes visitar el local de {local} haciendo mención de esto último y el reembolso sera efectuado sin problemas.
+  utter_pedir_disculpas_por_queja:
+  - text: Lamentamos mucho la situación que le ha ocurrido, nuestro shopping tratá de mantener unos altos estándares en el trato con sus clientes, y creemos brindar un gran servicio. Por eso su opinión sera tomada en cuenta para mejorar, en caso de necesitar una atención más personalizada te podes comunicar por mail shopping@gmail.com
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
